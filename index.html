@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .mdiv{
+            height: 100vh;
+            width: 100%;
+            background-image: url(sparkle.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:fixed;
+            top: 0px;
+            left: 0px;
+        }
+        .lgnform{
+            width: 250px;
+            height: 250px;
+            margin: 20% 45%;
+            text-align: center;
+        }
+        input{
+            width: 95%;
+            height: 20px;
+            margin-top: 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+            text-align: center;
+            font-weight: bolder;
+        }
+        input:focus{
+            outline: none;
+        }
+        .head{
+            color: white;
+            letter-spacing: 4px;
+            font-size: 30px;
+            font-family: Elephant;
+            font-weight: bolder;
+        }
+        input[type="button"]{
+            border: none;
+            height: 30px;
+            background-color: white;
+            color: black;
+            font-size: 15px;
+            margin-bottom: 10px;
+            transition-duration: 1s;
+            border-radius: 10px;
+        }
+        input[type="button"]:hover{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: aquamarine ;
+            transform: scale(1.1);
+        }
+        .ip1{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mdiv">
+        <div class="lgnform">
+            <form autocomplete="off">
+                <h2 class="head">LOGIN</h2>
+                <input type="text" name="Username" placeholder="Username" id="usr" >
+                <input type="password" name="Password" placeholder="Password" class="ip1" id="pass">
+                <span><a href="#">Forgot Password</a></span>
+                <input type="button" name="login" value="LOGIN" onclick="validate()">
+                <span><a href="#">Create Account</a></span>
+            </form>
+        </div>
+    </div>
+    <script>
+        let usr1="Priti";
+        let pass1="priti123"                                                                                                                                                                                                                                                                                                                           ;
+        function validate(){
+            let usr2=document.getElementById("usr").value
+            let pass2=document.getElementById("pass").value
+            if((usr1===usr2)&&(pass1===pass2)){
+                open('HomePage.html')
+            }
+            else{
+                alert("Invalid credentials")
+            }
+        }
+    </script>
+</body>
+</html>
